@@ -1,0 +1,23 @@
+TClean — archive source pour GitHub / Railway
+
+CONTENU
+- Les fichiers du projet sont directement à la racine de cette archive.
+- Les dossiers src/ et public/ sont inclus.
+- src/router.tsx et src/routeTree.gen.ts sont inclus.
+- .env.local n'est pas inclus. .env.example contient uniquement des valeurs d'exemple.
+- .gitignore exclut les fichiers d'environnement et les secrets.
+
+IMPORT SUR GITHUB
+1. Ouvrir le dépôt cible et vérifier que c'est bien le bon dépôt et la branche main.
+2. Décompresser cette archive localement.
+3. Ajouter le CONTENU du dossier décompressé à la racine du dépôt local existant, sans créer un sous-dossier supplémentaire.
+4. Avant tout commit, vérifier avec `git status --short` que `.env.local` n'est pas inclus et ne jamais publier de mots de passe.
+5. Committer et pousser sur main.
+
+VERIFICATION LOCALE
+- Ce projet fournit bun.lock, pas package-lock.json. Pour une installation npm, `npm install` génère un package-lock.json ; conserver ce fichier si l'équipe choisit npm.
+- Puis lancer `npm run build`.
+- Le build n'a pas été exécuté dans le cadre de la préparation de cette archive. La présence de src/router.tsx dans l'archive ne garantit pas à elle seule que la compilation réussira.
+
+SECURITE
+Si un vrai mot de passe a déjà été publié sur un dépôt public, le remplacer immédiatement. Retirer le fichier du prochain commit ou l'ajouter à .gitignore ne l'efface pas des commits précédents ; le nettoyage de l'historique est une opération distincte.
